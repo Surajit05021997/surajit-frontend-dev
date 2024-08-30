@@ -32,8 +32,8 @@
   --fw-black: 900;
 
   /** color **/
-  --clr-100: #fff;
-  --clr-900: #000;
+  --clr-neutral-100: #fff;
+  --clr-neutral-900: #000;
 }
 
 /* css reset */
@@ -65,11 +65,11 @@ input, textarea {
 
 /* light and dark mode colors */
 :root:has(#light-mode) {
-  --bg-clr: var(--clr-100);
+  --bg-clr: var(--clr-neutral-100);
 }
 
 :root:has(#dark-mode) {
-  --bg--clr: var(--clr-900);
+  --bg--clr: var(--clr-neutral-900);
 }
 
 /* general styling */
