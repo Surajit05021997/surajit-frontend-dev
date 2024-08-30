@@ -1,7 +1,8 @@
 import './AppHeader.scss';
+import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { updateTheme } from '../store/settingsSlice';
 import { useSelector } from 'react-redux';
+import { updateTheme } from '../store/settingsSlice';
 import sunIcon from '../assets/icons/Sun.svg';
 import moonIcon from '../assets/icons/Moon.svg';
 import logoDarkIcon from '../assets/icons/LogoDark.svg';
@@ -14,11 +15,20 @@ const AppHeader = () => {
   const settings = useSelector((state) => state.settings);
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    const theme = localStorage.getItem('theme');
+    if (theme) {
+      dispatch(updateTheme(theme));
+    }
+  }, []);
+
   const toggleTheme = () => {
     if (settings.theme === 'light-mode') {
       dispatch(updateTheme('dark-mode'));
+      localStorage.setItem('theme', 'dark-mode');
     } else {
       dispatch(updateTheme('light-mode'));
+      localStorage.setItem('theme', 'light-mode');
     }
   }
 
