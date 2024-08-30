@@ -1,0 +1,52 @@
+header {
+  position: relative;
+
+  .main-header {
+    height: 3.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1rem;
+    position: relative;
+    z-index: 100;
+    background-color: var( --header-bg-clr);
+  
+    .header-item-container {
+      display: flex;
+      align-items: center;
+  
+      .navbar {
+        margin-inline: 2.5rem;
+  
+        ul {
+          display: flex;
+          gap: 2.5rem;
+        }
+      }
+    }
+  }
+
+  .background {
+    .ellipse {
+      position: absolute;
+    }
+    
+    .ellipse-1 {
+      left: -191px;
+      top: -44px;
+      z-index: 1;
+    }
+  
+    .ellipse-2 {
+      left: 0;
+      top: -138px;
+      z-index:2;
+    }
+
+    .ellipse-3 {
+      left: 179px;
+      top: -111px;
+      z-index: 3;
+    }
+  }
+}

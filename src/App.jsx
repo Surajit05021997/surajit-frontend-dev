@@ -1,8 +1,12 @@
-import './App.css';
+import './App.scss';
+import './components/AppHeader';
+import AppHeader from './components/AppHeader';
 
 function App() {
   return (
-    <div>App</div>
+    <div>
+      <AppHeader />
+    </div>
   )
 }
 

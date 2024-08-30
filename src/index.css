@@ -33,7 +33,16 @@
 
   /** color **/
   --clr-neutral-100: #fff;
+  --clr-neutral-300: #C5C5C5;
+  --clr-neutral-800: #808080;
+  --clr-neutral-850: #181818;
   --clr-neutral-900: #000;
+
+  --clr-black-25: rgba(0,0,0,.25);
+
+  --clr-white-25: rgba(255,255,255,.25);
+
+  --text-clr: var(--clr-neutral-800);
 }
 
 /* css reset */
@@ -48,6 +57,7 @@ a {
 
 ol, ul {
   list-style: none;
+  padding: 0;
 }
 
 img, picture, svg, video, canvas {
@@ -66,10 +76,16 @@ input, textarea {
 /* light and dark mode colors */
 :root:has(#light-mode) {
   --bg-clr: var(--clr-neutral-100);
+  --header-bg-clr: var(--clr-white-25);
+  --heading-clr: var(--clr-neutral-850);
+  --list-item-clr: var(--clr-neutral-850);
 }
 
 :root:has(#dark-mode) {
-  --bg--clr: var(--clr-neutral-900);
+  --bg-clr: var(--clr-neutral-900);
+  --header-bg-clr: var(--clr-black-25);
+  --heading-clr: var(--clr-neutral-100);
+  --list-item-clr: var(--clr-neutral-300);
 }
 
 /* general styling */
@@ -78,21 +94,30 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   font-size: var(--fs-225);
+  background-color: var(--bg-clr);
+  color: var(--text-clr);
 }
 
 h1 {
   font-size: var(--fs-700);
   font-weight: var(--fw-bold);
+  color: var(--heading-clr);
 }
 
 h2 {
   font-size: var(--fs-500);
   font-weight: var(--fw-bold);
+  color: var(--heading-clr);
 }
 
 h3 {
   font-size: var(--fs-300);
   font-weight: var(--fw-extra-bold);
+  color: var(--heading-clr);
+}
+
+ul li {
+  color: var(--list-item-clr);
 }
 
 @media (min-width: 48rem) {
@@ -110,5 +135,18 @@ h3 {
 
   h3 {
     font-size: var(--fs-500);
+  }
+}
+
+/* utility */
+.container {
+  margin-inline: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .container {
+    max-width: 68rem;
+    margin: auto;
+    padding-inline: 2rem;
   }
 }
