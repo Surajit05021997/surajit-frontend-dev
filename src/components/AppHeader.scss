@@ -25,6 +25,20 @@ header {
         }
       }
 
+      .social-handle {
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .separator {
+        height: 1.5rem;
+        width: 2px;
+        background-color: var(--list-item-clr);
+        border-radius: 50%;
+        margin-inline: 1.5rem; 
+        opacity: .25;
+      }
+
       .theme-controler {
         cursor: pointer;
       }

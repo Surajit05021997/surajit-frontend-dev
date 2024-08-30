@@ -5,6 +5,10 @@ import { useSelector } from 'react-redux';
 import { updateTheme } from '../store/settingsSlice';
 import sunIcon from '../assets/icons/Sun.svg';
 import moonIcon from '../assets/icons/Moon.svg';
+import linkedinLightIcon from '../assets/icons/LinkedInLight.svg';
+import linkedinDarkIcon from '../assets/icons/LinkedInDark.svg';
+import githubLightIcon from '../assets/icons/GithubLight.svg';
+import githubDarkIcon from '../assets/icons/GithubDark.svg';
 import logoDarkIcon from '../assets/icons/LogoDark.svg';
 import logoLightIcon from '../assets/icons/LogoLight.svg';
 import ellipse1 from '../assets/background/Ellipse1.svg';
@@ -50,7 +54,15 @@ const AppHeader = () => {
             </div>
           </div>
           <div className="header-item-container">
-            <div className="header-item social-handle"></div>
+            <div className="header-item social-handle">
+              <a href="https://www.linkedin.com/in/surajit-maity" target="_blank">
+                <img src={settings.theme === 'light-mode' ? linkedinDarkIcon : linkedinLightIcon} alt="" />
+              </a>
+              <a href="https://github.com/Surajit05021997" target="_blank">
+                <img src={settings.theme === 'light-mode' ? githubDarkIcon : githubLightIcon} alt="" />
+              </a>
+            </div>
+            <div className="separator"></div>
             <div className="header-item theme-controler" onClick={toggleTheme}>
               <img id={settings.theme} src={settings.theme === 'light-mode' ? sunIcon : moonIcon} alt="Theme controller" />
             </div>
