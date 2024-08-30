@@ -10,6 +10,7 @@ header {
     position: relative;
     z-index: 100;
     background-color: var( --header-bg-clr);
+    border-radius: .25rem;
   
     .header-item-container {
       display: flex;
@@ -22,6 +23,10 @@ header {
           display: flex;
           gap: 2.5rem;
         }
+      }
+
+      .theme-controler {
+        cursor: pointer;
       }
     }
   }
