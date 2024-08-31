@@ -1,5 +1,8 @@
 .homepage {
   .hp-about {
+    margin-top: calc(((100dvh - 5.75rem - 23.375rem) / 2) - 4rem);
+    margin-bottom: calc(((100dvh - 5.75rem - 23.375rem) / 2) + 4rem);
+
     .title > span {
       color: var(--clr-neutral-800);
     }
