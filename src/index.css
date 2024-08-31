@@ -33,6 +33,7 @@
 
   /** color **/
   --clr-neutral-100: #fff;
+  --clr-neutral-200: #F3F3F3;
   --clr-neutral-300: #C5C5C5;
   --clr-neutral-800: #808080;
   --clr-neutral-850: #181818;
@@ -43,6 +44,8 @@
   --clr-white-25: rgba(255,255,255,.25);
 
   --text-clr: var(--clr-neutral-800);
+
+  --dark-gradient: linear-gradient(0deg, rgb(12 12 12) 0%, rgb(22 22 22) 100%);
 }
 
 /* css reset */
@@ -79,6 +82,8 @@ input, textarea {
   --header-bg-clr: var(--clr-white-25);
   --heading-clr: var(--clr-neutral-850);
   --list-item-clr: var(--clr-neutral-850);
+  --btn-secondary-clr: var(--clr-neutral-850);
+  --btn-secondary-bg-clr: var(--clr-neutral-200);
 }
 
 :root:has(#dark-mode) {
@@ -86,6 +91,8 @@ input, textarea {
   --header-bg-clr: var(--clr-black-25);
   --heading-clr: var(--clr-neutral-100);
   --list-item-clr: var(--clr-neutral-300);
+  --btn-secondary-clr: var(--clr-neutral-800);
+  --btn-secondary-bg-clr: var(--clr-neutral-850);
 }
 
 /* general styling */
@@ -96,6 +103,7 @@ body {
   font-size: var(--fs-225);
   background-color: var(--bg-clr);
   color: var(--text-clr);
+  overflow-x: hidden;
   transition: background-color 300ms, color 300ms;
 }
 
@@ -119,6 +127,11 @@ h3 {
 
 ul li {
   color: var(--list-item-clr);
+}
+
+button {
+  font-size: var(--fs-275);
+  font-weight: var(--fw-medium);
 }
 
 @media (min-width: 48rem) {

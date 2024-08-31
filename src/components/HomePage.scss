@@ -1,0 +1,18 @@
+.homepage {
+  .hp-about {
+    .title > span {
+      color: var(--clr-neutral-800);
+    }
+
+    .body {
+      font-size: var(--fs-400);
+      width: 47rem;
+      margin-block: 3rem;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}

@@ -48,24 +48,26 @@ header {
   .background {
     .ellipse {
       position: absolute;
+      user-select: none;
+      -webkit-user-select: none;
     }
     
     .ellipse-1 {
       left: -191px;
       top: -44px;
-      z-index: 1;
+      z-index: -3;
     }
   
     .ellipse-2 {
       left: 0;
       top: -138px;
-      z-index:2;
+      z-index: -2;
     }
 
     .ellipse-3 {
       left: 179px;
       top: -111px;
-      z-index: 3;
+      z-index: -1;
     }
   }
 }
