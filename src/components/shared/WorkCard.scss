@@ -1,0 +1,56 @@
+.work-card {
+  background-color: var(--work-card-bg-clr);
+  border-radius: 2rem;
+  overflow: hidden;
+
+  &:has(.site-image) {
+    height: 32rem;
+    display: grid;
+    grid-template-columns: 2fr 1.35fr;
+  }
+
+  .info {
+    padding: 3.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .logo {
+      width: 4rem;
+      height: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    .title {
+      margin-bottom: 1rem;
+    }
+
+    .site-link {
+      color: var(--heading-clr);
+      font-size: var(--fs-275);
+      font-weight: var(--fw-medium);
+      display: flex;
+      gap: .5rem;
+      align-items: center;
+      width: fit-content;
+
+      &:hover {
+        .right-arrow {
+          transform: translateX(.5rem);
+          transition: transform 300ms;
+        }
+      }
+    }
+  }
+
+  .site-image {
+    position: relative;
+
+    img {
+      position: absolute;
+      max-width: unset;
+      height: 24.5rem;
+      top: 3.75rem;
+    }
+  }
+}

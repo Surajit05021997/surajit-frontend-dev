@@ -18,4 +18,22 @@
       gap: 1rem;
     }
   }
+
+  .hp-work {
+    .title {
+      margin-bottom: 2rem;
+    }
+
+    .work-experience {
+      .title {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .personal-projects {
+      .title {
+        margin-bottom: 1rem;
+      }
+    }
+  }
 }

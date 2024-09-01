@@ -1,0 +1,11 @@
+[
+  {
+    "type": "professional",
+    "logoName": "capgemini-logo.png",
+    "title": "Capgemini",
+    "subtitle": "",
+    "body": "During my five-year tenure at Capgemini, I served as a Front-End Developer specializing in the Vue.js framework. My primary role involved crafting intuitive and high-performance user interfaces for ABN AMRO bank, the third-largest Dutch bank. I collaborated closely with cross-functional teams to translate complex business requirements into seamless, user-centric digital experiences.",
+    "siteImageName": "ABNAMROHomepage.jpg",
+    "siteUrl": "https://www.abnamro.com/nl/home"
+  }
+]
