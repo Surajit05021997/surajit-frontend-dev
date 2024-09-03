@@ -16,5 +16,14 @@
     "body": "During my five-year tenure at Capgemini, I served as a Front-End Developer specializing in the Vue.js framework. My primary role involved crafting intuitive and high-performance user interfaces for ABN AMRO bank, the third-largest Dutch bank. I collaborated closely with cross-functional teams to translate complex business requirements into seamless, user-centric digital experiences.",
     "siteImageName": "ABNAMROHomepage.jpg",
     "siteUrl": "https://www.abnamro.com/nl/home"
+  },
+  {
+    "type": "personal",
+    "logoName": "SastaSwiggyLogo.png",
+    "title": "Sasta Swiggy",
+    "subtitle": "",
+    "body": "Sasta Swiggy is a clone of the popular food delivery service 'Swiggy', built using React, Express, Firebase and various other technologies.",
+    "siteImageName": "SastaSwiggyHomepage.jpg",
+    "siteUrl": "https://sastaswiggy.netlify.app/"
   }
 ]
