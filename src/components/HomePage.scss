@@ -25,14 +25,28 @@
     }
 
     .work-experience {
+      margin-bottom: 2rem;
+
       .title {
         margin-bottom: 1rem;
+      }
+
+      .word-card-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
       }
     }
 
     .personal-projects {
       .title {
         margin-bottom: 1rem;
+      }
+
+      .word-card-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
       }
     }
   }

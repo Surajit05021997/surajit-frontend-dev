@@ -32,23 +32,27 @@ const HomePage = () => {
         <h2 className="title">Selected Work</h2>
         <section className="work-experience">
           <h3 className="title">Work Experience</h3>
-          {
-            selectedProfessionalWorkList.map((work) => {
-              return (
-                <WorkCard key={work.title} work={work} />
-              )
-            })
-          }
+          <div className="word-card-list">
+            {
+              selectedProfessionalWorkList.map((work) => {
+                return (
+                  <WorkCard key={work.title} work={work} />
+                )
+              })
+            }
+          </div>
         </section>
         <section className="personal-projects">
           <h3 className="title">Personal Projects</h3>
-          {
-            selectedPersonalWorkList.map((work) => {
-              return (
-                <WorkCard key={work.title} work={work} />
-              )
-            })
-          }
+          <div className="word-card-list">
+            {
+              selectedPersonalWorkList.map((work) => {
+                return (
+                  <WorkCard key={work.title} work={work} />
+                )
+              })
+            }
+          </div>
         </section>
       </section>
     </div>
