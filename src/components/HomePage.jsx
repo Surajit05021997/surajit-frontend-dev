@@ -2,7 +2,9 @@ import './HomePage.scss';
 import AppButton from './shared/AppButton';
 import resume from '../assets/files/Resume.pdf';
 import WorkCard from './shared/WorkCard';
+import KnowMeCard from './shared/KnowMeCard';
 import selectedWorkList from '../constants/selectedWorkList.json';
+import knowMeCardDetails from '../constants/KnowMeCardDetails.json';
 import { useEffect, useState } from 'react';
 
 const HomePage = () => {
@@ -54,6 +56,27 @@ const HomePage = () => {
             }
           </div>
         </section>
+      </section>
+
+      <section className="hp-know-me">
+        <h2 className="title">Get to know me</h2>
+        <div className="know-me-card-list">
+          {
+            knowMeCardDetails.map((knowMeCardDetails) => {
+              return (
+                <KnowMeCard key={knowMeCardDetails.title} knowMeCardDetails={knowMeCardDetails} />
+              )
+            })
+          }
+        </div>
+      </section>
+
+      <section className="hp-contact">
+          <h2 className="title">Let’s work together</h2>
+          <div className="body">
+            <p>Want to discuss an opportunity to create something great? I’m ready when you are.</p>
+            <AppButton type="primary" label="Get in touch" />
+          </div>
       </section>
     </div>
   );

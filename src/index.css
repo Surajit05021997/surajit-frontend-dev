@@ -88,6 +88,7 @@ input, textarea {
   --btn-secondary-bg-clr: var(--clr-neutral-200);
   --work-card-bg-clr: var(--clr-neutral-200);
   --border-clr: var(--clr-neutral-250);
+  --know-me-card-bg-clr: var(--clr-neutral-200);
 }
 
 :root:has(#dark-mode) {
@@ -100,6 +101,7 @@ input, textarea {
   --btn-secondary-bg-clr: var(--clr-neutral-850);
   --work-card-bg-clr: var(--clr-neutral-850);
   --border-clr: #202020;
+  --know-me-card-bg-clr: var(--clr-neutral-850);
 }
 
 /* general styling */
@@ -143,7 +145,7 @@ button {
 
 @media (min-width: 48rem) {
   body {
-    font-size: var(--fs-250);
+    font-size: var(--fs-275);
   }
 
   h1 {
