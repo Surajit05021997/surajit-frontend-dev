@@ -2,6 +2,7 @@ import './WorkCard.scss';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import getImageUrl from '../../utils/getImageUrl';
+import laptopPlaceholder from '../../assets/images/LaptopPlaceholder.png';
 import arrowRightDark from '../../assets/icons/arrowRightDark.svg';
 import arrowRightLight from '../../assets/icons/arrowRightLight.svg';
 
@@ -24,8 +25,9 @@ const WorkCard = ({ work }) => {
       </div>
       {
         siteImageName ? (
-          <div className="site-image">
-            <img src={getImageUrl('/src/assets/work', siteImageName)} alt="" />
+          <div className="image">
+            <img className="laptop-placeholder" src={laptopPlaceholder} alt="Laptop placeholder" />
+            <img className="site-image" src={getImageUrl('/src/assets/work', siteImageName)} alt="" />
           </div>
         ) : ('')
       }

@@ -44,14 +44,22 @@
     }
   }
 
-  .site-image {
+  .image {
     position: relative;
 
-    img {
+    .laptop-placeholder {
       position: absolute;
       max-width: unset;
       height: 24.5rem;
       top: 3.75rem;
+    }
+
+    .site-image {
+      position: absolute;
+      height: 20.3125rem;
+      top: 4.875rem;
+      left: 4.875rem;
+      max-width: unset;
     }
   }
 }
