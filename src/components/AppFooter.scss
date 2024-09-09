@@ -1,0 +1,42 @@
+.footer {
+  margin: 4.625rem 0 2.625rem;
+  display: flex;
+  justify-content: space-between;
+
+  .footer-item-left {
+    .footer-item {
+      &.logo {
+        img {
+          width: 4rem;
+          height: 4rem;
+        }
+  
+        .copyright {
+          font-size: var(--fs-200);
+          margin-top: .875rem;
+        }
+      }
+    }
+  }
+
+  .footer-item-right {
+    display: flex;
+    gap: 7.5rem;
+    
+    .footer-item {
+      font-size: var(--fs-250);
+
+      .title {
+        color: var(--heading-clr);
+        font-weight: var(--fw-bold);
+      }
+
+      ul {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  }
+}

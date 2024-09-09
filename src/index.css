@@ -42,8 +42,10 @@
   --clr-neutral-850: #181818;
   --clr-neutral-900: #000;
 
+  --clr-black-10: rgba(0,0,0,.10);
   --clr-black-25: rgba(0,0,0,.25);
 
+  --clr-white-10: rgba(255,255,255,.10);
   --clr-white-25: rgba(255,255,255,.25);
 
   --dark-gradient: linear-gradient(0deg, rgb(12 12 12) 0%, rgb(22 22 22) 100%);
@@ -89,6 +91,7 @@ input, textarea {
   --work-card-bg-clr: var(--clr-neutral-200);
   --border-clr: var(--clr-neutral-250);
   --know-me-card-bg-clr: var(--clr-neutral-200);
+  --hr-clr: var(--clr-black-10);
 }
 
 :root:has(#dark-mode) {
@@ -102,6 +105,7 @@ input, textarea {
   --work-card-bg-clr: var(--clr-neutral-850);
   --border-clr: #202020;
   --know-me-card-bg-clr: var(--clr-neutral-850);
+  --hr-clr: var(--clr-white-10);
 }
 
 /* general styling */
