@@ -53,7 +53,7 @@ const AppHeader = () => {
                   <Link to="/about">About</Link>
                 </li>
                 <li>Work</li>
-                <li>Contact</li>
+                <li><Link to="/contact">Contact</Link></li>
                 <li>More</li>
               </ul>
             </div>

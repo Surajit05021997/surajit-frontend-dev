@@ -28,7 +28,7 @@ const AppFooter = () => {
               </li>
               <li>Work</li>
               <li>Tech Stack</li>
-              <li>Contact</li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
           <div className="footer-item elsewhere">
