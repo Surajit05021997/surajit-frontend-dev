@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <AppHeader />
-      <main className="container">
+      <main>
         <Outlet />
       </main>
       <hr />
