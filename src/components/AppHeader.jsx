@@ -1,5 +1,6 @@
 import './AppHeader.scss';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { updateTheme } from '../store/settingsSlice';
@@ -42,11 +43,15 @@ const AppHeader = () => {
         <div className="main-header">
           <div className="header-item-container">
             <div className="header-item logo">
-              <img src={settings.theme === 'light-mode' ? logoDarkIcon : logoLightIcon} alt="Logo" />
+              <Link>
+                <img src={settings.theme === 'light-mode' ? logoDarkIcon : logoLightIcon} alt="Logo" />
+              </Link>
             </div>
             <div className="header-item navbar">
               <ul>
-                <li>About</li>
+                <li>
+                  <Link to="/about">About</Link>
+                </li>
                 <li>Work</li>
                 <li>Contact</li>
                 <li>More</li>

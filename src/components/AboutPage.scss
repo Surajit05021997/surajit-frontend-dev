@@ -1,0 +1,22 @@
+.about-page {
+  .title {
+    margin: 11.625rem 0 .5rem;
+  }
+
+  .subtitle {
+    font-size: var(--fs-400);
+    margin-bottom: 4.625rem;
+  }
+
+  .body {
+    width: 37.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4.625rem;
+
+    .para-title {
+      margin-bottom: .5rem;
+    }
+  }
+}
