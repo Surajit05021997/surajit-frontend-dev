@@ -6,6 +6,7 @@ import KnowMeCard from './shared/KnowMeCard';
 import selectedWorkList from '../constants/selectedWorkList.json';
 import knowMeCardDetails from '../constants/KnowMeCardDetails.json';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   const [selectedProfessionalWorkList, setSelectedProfessionalWorkList] = useState([]);
@@ -76,7 +77,9 @@ const HomePage = () => {
             <h2 className="title">Let’s work together</h2>
             <div className="body">
               <p>Want to discuss an opportunity to create something great? I’m ready when you are.</p>
-              <AppButton type="primary" label="Get in touch" />
+              <Link to="/contact">
+                <AppButton type="primary" label="Get in touch" />
+              </Link>
             </div>
         </section>
       </div>

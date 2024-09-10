@@ -15,7 +15,9 @@ const AppFooter = () => {
       <footer>
         <div className="footer-item-left">
           <div className="footer-item logo">
-            <img src={settings.theme === 'light-mode' ? logoDarkIcon : logoLightIcon} alt="Logo" />
+            <Link to="/">
+              <img src={settings.theme === 'light-mode' ? logoDarkIcon : logoLightIcon} alt="Logo" />
+            </Link>
             <p className="copyright">© 2024 Surajit Maity. All Rights Reserved.</p>
           </div>
         </div>
