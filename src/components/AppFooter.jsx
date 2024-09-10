@@ -1,5 +1,6 @@
 import './AppFooter.scss';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import logoDarkIcon from '../assets/icons/LogoDark.svg';
 import logoLightIcon from '../assets/icons/LogoLight.svg';
 import ellipse4 from '../assets/background/Ellipse4.svg';
@@ -22,7 +23,9 @@ const AppFooter = () => {
           <div className="footer-item links">
             <div className="title">Links</div>
             <ul>
-              <li>About</li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
               <li>Work</li>
               <li>Tech Stack</li>
               <li>Contact</li>
