@@ -31,8 +31,12 @@ const AppFooter = () => {
               <li>
                 <Link to="/work">Work</Link>
               </li>
-              <li>Tech Stack</li>
-              <li><Link to="/contact">Contact</Link></li>
+              <li>
+                <Link to="/techstack">Tech Stack</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
             </ul>
           </div>
           <div className="footer-item elsewhere">

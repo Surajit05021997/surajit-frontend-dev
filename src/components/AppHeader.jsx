@@ -17,7 +17,7 @@ import ellipse2 from '../assets/background/Ellipse2.svg';
 import ellipse3 from '../assets/background/Ellipse3.svg';
 
 const AppHeader = () => {
-  const [headerMoreListExpanded, setHeaderMoreListExpanded] = useState(false);
+  const [headerExtraNavMenuExpanded, setHeaderExtraNavMenuExpanded] = useState(false);
   const settings = useSelector((state) => state.settings);
   const dispatch = useDispatch();
 
@@ -28,8 +28,12 @@ const AppHeader = () => {
     }
   }, []);
 
-  const toggleHeaderMoreList = () => {
-    setHeaderMoreListExpanded(!headerMoreListExpanded);
+  const toggleHeaderExtraNavMenu = () => {
+    setHeaderExtraNavMenuExpanded(!headerExtraNavMenuExpanded);
+  }
+
+  const closeHeaderExtraNavMenu = () => {
+    setHeaderExtraNavMenuExpanded(false);
   }
 
   const toggleTheme = () => {
@@ -63,10 +67,12 @@ const AppHeader = () => {
                 <li>
                   <Link to="/contact">Contact</Link>
                 </li>
-                <li onClick={toggleHeaderMoreList}>More</li>
+                <li onClick={toggleHeaderExtraNavMenu}>More</li>
               </ul>
-              <ul className={`more-list ${headerMoreListExpanded ? 'expanded' : 'collapsed'}`}>
-                <li>Tech Stack</li>
+              <ul className={`extra-nav-menu ${headerExtraNavMenuExpanded ? 'expanded' : 'collapsed'}`}>
+                <li>
+                <Link to="/techstack" onClick={closeHeaderExtraNavMenu}>Tech Stack</Link>
+              </li>
               </ul>
             </div>
           </div>

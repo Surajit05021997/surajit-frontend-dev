@@ -4,6 +4,7 @@ import HomePage from '../components/HomePage.jsx';
 import AboutPage from '../components/AboutPage.jsx';
 import ContactPage from '../components/ContactPage.jsx';
 import WorkPage from '../components/WorkPage.jsx';
+import TechStackPage from '../components/TechStackPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <ContactPage />,
+      },
+      {
+        path: '/techstack',
+        element: <TechStackPage />,
       },
     ],
   },
