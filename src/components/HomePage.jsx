@@ -1,7 +1,6 @@
 import './HomePage.scss';
 import AppButton from './shared/AppButton';
 import resume from '../assets/files/Resume.pdf';
-import WorkCard from './shared/WorkCard';
 import WorkCardList from './shared/WorkCardList';
 import KnowMeCard from './shared/KnowMeCard';
 import selectedWorkList from '../constants/selectedWorkList.json';
