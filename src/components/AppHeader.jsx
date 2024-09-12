@@ -1,5 +1,5 @@
 import './AppHeader.scss';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
@@ -17,6 +17,7 @@ import ellipse2 from '../assets/background/Ellipse2.svg';
 import ellipse3 from '../assets/background/Ellipse3.svg';
 
 const AppHeader = () => {
+  const [headerMoreListExpanded, setHeaderMoreListExpanded] = useState(false);
   const settings = useSelector((state) => state.settings);
   const dispatch = useDispatch();
 
@@ -26,6 +27,10 @@ const AppHeader = () => {
       dispatch(updateTheme(theme));
     }
   }, []);
+
+  const toggleHeaderMoreList = () => {
+    setHeaderMoreListExpanded(!headerMoreListExpanded);
+  }
 
   const toggleTheme = () => {
     if (settings.theme === 'light-mode') {
@@ -58,7 +63,10 @@ const AppHeader = () => {
                 <li>
                   <Link to="/contact">Contact</Link>
                 </li>
-                <li>More</li>
+                <li onClick={toggleHeaderMoreList}>More</li>
+              </ul>
+              <ul className={`more-list ${headerMoreListExpanded ? 'expanded' : 'collapsed'}`}>
+                <li>Tech Stack</li>
               </ul>
             </div>
           </div>
