@@ -2,6 +2,7 @@ import './HomePage.scss';
 import AppButton from './shared/AppButton';
 import resume from '../assets/files/Resume.pdf';
 import WorkCard from './shared/WorkCard';
+import WorkCardList from './shared/WorkCardList';
 import KnowMeCard from './shared/KnowMeCard';
 import selectedWorkList from '../constants/selectedWorkList.json';
 import knowMeCardDetails from '../constants/KnowMeCardDetails.json';
@@ -36,27 +37,11 @@ const HomePage = () => {
           <h2 className="title">Selected Work</h2>
           <section className="work-experience">
             <h3 className="title">Work Experience</h3>
-            <div className="word-card-list">
-              {
-                selectedProfessionalWorkList.map((work) => {
-                  return (
-                    <WorkCard key={work.title} work={work} />
-                  )
-                })
-              }
-            </div>
+            <WorkCardList workList={selectedProfessionalWorkList} />
           </section>
           <section className="personal-projects">
             <h3 className="title">Personal Projects</h3>
-            <div className="word-card-list">
-              {
-                selectedPersonalWorkList.map((work) => {
-                  return (
-                    <WorkCard key={work.title} work={work} />
-                  )
-                })
-              }
-            </div>
+            <WorkCardList workList={selectedPersonalWorkList} />
           </section>
         </section>
 
