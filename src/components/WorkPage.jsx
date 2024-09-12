@@ -17,7 +17,7 @@ const WorkPage = () => {
       <div className="container">
         <div className="work-page">
           <h1 className="title">Projects</h1>
-          <p className="subtitle">Projects and ideas I’ve worked on</p>
+          <p className="subtitle">Projects and ideas I’ve worked on.</p>
         </div>
       </div>
       <hr />

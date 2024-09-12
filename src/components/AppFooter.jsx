@@ -38,9 +38,12 @@ const AppFooter = () => {
           <div className="footer-item elsewhere">
             <div className="title">Elsewhere</div>
             <ul>
-              <li>Email</li>
-              <li>Linkedin</li>
-              <li>Github</li>
+              <li>
+                <a href="https://www.linkedin.com/in/surajit-maity" target="_blank">Linkedin</a>
+              </li>
+              <li>
+                <a href="https://github.com/Surajit05021997" target="_blank">Github</a>
+              </li>
             </ul>
           </div>
         </div>
