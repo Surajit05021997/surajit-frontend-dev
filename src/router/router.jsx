@@ -3,6 +3,7 @@ import App from '../App.jsx';
 import HomePage from '../components/HomePage.jsx';
 import AboutPage from '../components/AboutPage.jsx';
 import ContactPage from '../components/ContactPage.jsx';
+import WorkPage from '../components/WorkPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <AboutPage />,
+      },
+      {
+        path: '/work',
+        element: <WorkPage />,
       },
       {
         path: '/contact',
