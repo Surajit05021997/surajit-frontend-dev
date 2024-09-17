@@ -90,7 +90,7 @@ input, textarea {
   --list-item-clr: var(--clr-neutral-850);
   --btn-secondary-clr: var(--clr-neutral-850);
   --btn-secondary-bg-clr: var(--clr-neutral-200);
-  --work-card-bg-clr: var(--clr-neutral-200);
+  --card-bg-clr: var(--clr-neutral-200);
   --border-clr: var(--clr-neutral-250);
   --know-me-card-bg-clr: var(--clr-neutral-200);
   --hr-clr: var(--clr-black-10);
@@ -106,7 +106,7 @@ input, textarea {
   --list-item-clr: var(--clr-neutral-300);
   --btn-secondary-clr: var(--clr-neutral-800);
   --btn-secondary-bg-clr: var(--clr-neutral-850);
-  --work-card-bg-clr: var(--clr-neutral-850);
+  --card-bg-clr: var(--clr-neutral-850);
   --border-clr: #202020;
   --know-me-card-bg-clr: var(--clr-neutral-850);
   --hr-clr: var(--clr-white-10);

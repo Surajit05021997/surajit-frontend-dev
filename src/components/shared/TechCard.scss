@@ -1,0 +1,19 @@
+.tech-card {
+  background-color: var(--card-bg-clr);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  border-radius: 2rem;
+
+  .tech-icon {
+    margin: 4rem 0 2.75rem 0;
+  }
+
+  .tech-name {
+    color: var(--text-secondary-clr);
+    font-weight: var(--fw-semi-bold);
+  }
+}
