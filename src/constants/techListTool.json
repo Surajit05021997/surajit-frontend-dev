@@ -1,0 +1,30 @@
+[
+  {
+    "iconName": "Html5.svg",
+    "techName": "HTML5"
+  },
+  {
+    "iconName": "Css3.svg",
+    "techName": "CSS3"
+  },
+  {
+    "iconName": "Scss.svg",
+    "techName": "SCSS"
+  },
+  {
+    "iconName": "Javascript.svg",
+    "techName": "Javascript"
+  },
+  {
+    "iconName": "React.svg",
+    "techName": "React"
+  },
+  {
+    "iconName": "Vue.svg",
+    "techName": "Vue"
+  },
+  {
+    "iconName": "Angular.svg",
+    "techName": "Angular"
+  }
+]

@@ -9,15 +9,19 @@
   }
 
   .tech-list-container {
-    .tech-list-title {
-      margin: 4.625rem 0 1.5rem 0;
-    }
-
+    margin-block: 4.625rem;
+    
     .tech-list {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
+      .tech-list-title {
+        margin: 3.5rem 0 1.5rem 0;
+      }
   
+      .tech-card-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    
+      }
     }
   }
 }
