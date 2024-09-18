@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import { updateTheme } from '../store/settingsSlice';
 import sunIcon from '../assets/icons/Sun.svg';
 import moonIcon from '../assets/icons/Moon.svg';
+import linkArrow from '../assets/icons/LinkArrow.svg';
 import linkedinLightIcon from '../assets/icons/LinkedInLight.svg';
 import linkedinDarkIcon from '../assets/icons/LinkedInDark.svg';
 import githubLightIcon from '../assets/icons/GithubLight.svg';
@@ -35,7 +36,7 @@ const AppHeader = () => {
   useEffect( () => () => document.removeEventListener('click', handleExtraNavMeuCollapse), [] );
 
   const handleExtraNavMeuCollapse = (event) => {
-    if(event.target !== extraNavMenuEl.current && event.target !== moreNavItemEl.current) {
+    if(event.target !== extraNavMenuEl.current && event.target.parentElement !== moreNavItemEl.current) {
       setHeaderExtraNavMenuExpanded(false);
     }
   }
@@ -79,7 +80,10 @@ const AppHeader = () => {
                 <li>
                   <Link to="/contact">Contact</Link>
                 </li>
-                <li onClick={toggleHeaderExtraNavMenu} ref={moreNavItemEl}>More</li>
+                <li onClick={toggleHeaderExtraNavMenu} ref={moreNavItemEl}>
+                  <div>More</div>
+                  <img className={headerExtraNavMenuExpanded ? 'link-arrow-up' : 'link-arrow-down'} src={linkArrow} alt="Link arrow" />
+                </li>
               </ul>
               <ul className={`extra-nav-menu ${headerExtraNavMenuExpanded ? 'expanded' : 'collapsed'}`} ref={extraNavMenuEl}>
                 <li>
@@ -98,7 +102,7 @@ const AppHeader = () => {
               </a>
             </div>
             <div className="separator"></div>
-            <div className="header-item theme-controler" onClick={toggleTheme}>
+            <div className="header-item theme-controller" onClick={toggleTheme}>
               <img id={settings.theme} src={settings.theme === 'light-mode' ? sunIcon : moonIcon} alt="Theme controller" />
             </div>
           </div>

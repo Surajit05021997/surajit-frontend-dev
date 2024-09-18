@@ -27,6 +27,17 @@ header {
           li {
             cursor: pointer;
             user-select: none;
+            display: flex;
+            align-items: center;
+
+            .link-arrow-down {
+              transition: transform 300ms;
+            }
+
+            .link-arrow-up {
+              transform: rotate(180deg);
+              transition: transform 300ms;
+            }
           }
         }
 
@@ -58,7 +69,7 @@ header {
         opacity: .25;
       }
 
-      .theme-controler {
+      .theme-controller {
         cursor: pointer;
       }
     }
