@@ -47,7 +47,7 @@ const AppHeader = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container stiky-header">
       <header>
         <div className="main-header">
           <div className="header-item-container">

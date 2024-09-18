@@ -1,3 +1,11 @@
+.stiky-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--bg-clr);
+  transition: background-color 300ms;
+}
+
 header {
   position: relative;
 
