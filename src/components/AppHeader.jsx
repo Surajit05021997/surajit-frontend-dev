@@ -1,5 +1,5 @@
 import './AppHeader.scss';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
@@ -19,6 +19,8 @@ import ellipse3 from '../assets/background/Ellipse3.svg';
 const AppHeader = () => {
   const [headerExtraNavMenuExpanded, setHeaderExtraNavMenuExpanded] = useState(false);
   const settings = useSelector((state) => state.settings);
+  const extraNavMenuEl = useRef(null);
+  const moreNavItemEl = useRef(null);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -26,7 +28,17 @@ const AppHeader = () => {
     if (theme) {
       dispatch(updateTheme(theme));
     }
+
+    document.addEventListener('click', handleExtraNavMeuCollapse);
   }, []);
+
+  useEffect( () => () => document.removeEventListener('click', handleExtraNavMeuCollapse), [] );
+
+  const handleExtraNavMeuCollapse = (event) => {
+    if(event.target !== extraNavMenuEl.current && event.target !== moreNavItemEl.current) {
+      setHeaderExtraNavMenuExpanded(false);
+    }
+  }
 
   const toggleHeaderExtraNavMenu = () => {
     setHeaderExtraNavMenuExpanded(!headerExtraNavMenuExpanded);
@@ -67,12 +79,12 @@ const AppHeader = () => {
                 <li>
                   <Link to="/contact">Contact</Link>
                 </li>
-                <li onClick={toggleHeaderExtraNavMenu}>More</li>
+                <li onClick={toggleHeaderExtraNavMenu} ref={moreNavItemEl}>More</li>
               </ul>
-              <ul className={`extra-nav-menu ${headerExtraNavMenuExpanded ? 'expanded' : 'collapsed'}`}>
+              <ul className={`extra-nav-menu ${headerExtraNavMenuExpanded ? 'expanded' : 'collapsed'}`} ref={extraNavMenuEl}>
                 <li>
-                <Link to="/techstack" onClick={closeHeaderExtraNavMenu}>Tech Stack</Link>
-              </li>
+                  <Link to="/techstack" onClick={closeHeaderExtraNavMenu}>Tech Stack</Link>
+                </li>
               </ul>
             </div>
           </div>
