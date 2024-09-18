@@ -26,5 +26,13 @@
   {
     "iconName": "Angular.svg",
     "techName": "Angular"
+  },
+  {
+    "iconName": "Node.svg",
+    "techName": "Node.js"
+  },
+  {
+    "iconName": "Express.svg",
+    "techName": "Express"
   }
 ]
