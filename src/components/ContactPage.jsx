@@ -1,8 +1,28 @@
 import './ContactPage.scss';
 import macOSControls from '../assets/icons/MacOSControls.svg';
 import AppButton from './shared/AppButton';
+import { useRef } from 'react';
+import emailjs from 'emailjs-com';
 
 const ContactPage = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      form.current,
+      import.meta.env.VITE_EMAILJS_USER_ID
+    )
+    .then(() => {
+      alert('Message sent successfully!');
+      form.current.reset();
+    }, () => {
+      alert('Failed to send message.');
+    });
+  };
+
   return (
     <>
       <div className="container">
@@ -19,24 +39,24 @@ const ContactPage = () => {
               <img src={macOSControls} alt="Mac OS Controls" />
             </div>
             <hr />
-            <form>
+            <form ref={form} onSubmit={sendEmail}>
               <div className="field">
                 <label htmlFor="email">Email:</label>
-                <input id="email" type="email" placeholder="Enter you email address" />
+                <input id="email" name="email" type="email" placeholder="Enter you email address" required />
               </div>
               <hr />
               <div className="field">
                 <label htmlFor="name">Name:</label>
-                <input id="name" type="text" placeholder="Enter your name" />
+                <input id="name" name="name" type="text" placeholder="Enter your name" required />
               </div>
               <hr />
               <div className="field">
                 <label htmlFor="subject">Subject:</label>
-                <input id="subject" type="text" placeholder="Enter subject" />
+                <input id="subject" name="subject" type="text" placeholder="Enter subject" required />
               </div>
               <hr />
               <div className="field">
-                <textarea name="message" id="message" placeholder="Write your message here"></textarea>
+                <textarea name="message" id="message" placeholder="Write your message here" required></textarea>
               </div>
               <div className="send-btn">
                 <AppButton label="Send" />
