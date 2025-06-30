@@ -2,11 +2,13 @@
   {
     "title": "About me",
     "subtitle": "Who I am and what I do",
-    "imageName": "Avatar.png"
+    "imageName": "Avatar.png",
+    "linkTo": "/about"
   },
   {
     "title": "Tech Stack",
     "subtitle": "The dev tools, apps, devices, and games I use and play.",
-    "imageName": "TechStack.png"
+    "imageName": "TechStack.png",
+    "linkTo": "/techstack"
   }
 ]

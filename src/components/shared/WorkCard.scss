@@ -38,8 +38,13 @@
       &:hover {
         .right-arrow {
           transform: translateX(.5rem);
-          transition: transform 300ms;
+          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+      }
+
+      .right-arrow {
+        transform: translateX(0);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
     }
   }
