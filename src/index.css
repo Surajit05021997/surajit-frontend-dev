@@ -107,7 +107,7 @@ input, textarea {
 
 :root:has(#dark-mode) {
   --text-clr: var(--clr-neutral-300);
-  --text-secondary-clr: var(--clr-neutral-100);
+  --text-secondary-clr: var(--clr-neutral-200);
   --bg-clr: var(--clr-neutral-900);
   --header-bg-clr: var(--clr-black-25);
   --heading-clr: var(--clr-neutral-100);

@@ -30,6 +30,7 @@
 
       .field {
         display: flex;
+        align-items: center;
 
         label {
           color: var(--text-secondary-clr);
@@ -39,8 +40,24 @@
         input {
           border: none;
           background-color: transparent;
-          margin: 0 .5rem;
+          margin: 0 0 0 .5rem;
           width: 100%;
+          padding: .5rem 1rem;
+          background-color: var(--bg-clr) !important;
+          transition: background-color 300ms;
+
+          &:-webkit-autofill,
+          &:-webkit-autofill:focus,
+          &:-webkit-autofill:hover,
+          &:-webkit-autofill:active {
+            color: var(--text-clr);
+            -webkit-box-shadow: 0 0 0 1000px  var(--bg-clr) inset !important;
+            box-shadow: 0 0 0 1000px  var(--bg-clr) inset !important;
+            -webkit-text-fill-color:  var(--text-clr) !important;
+            background-color:  var(--bg-clr) !important;
+            transition: background-color 300ms;
+            caret-color: var(--text-clr);
+          }
         }
   
         input:focus {
@@ -64,6 +81,21 @@
           width: 100%;
           height: 15rem;
           transition: background-color 300ms;
+          background-color:  var(--bg-clr) !important;
+          transition: background-color 300ms;
+
+          &:-webkit-autofill,
+          &:-webkit-autofill:focus,
+          &:-webkit-autofill:hover,
+          &:-webkit-autofill:active {
+            color: var(--text-clr);
+            -webkit-box-shadow: 0 0 0 1000px  var(--bg-clr) inset !important;
+            box-shadow: 0 0 0 1000px  var(--bg-clr) inset !important;
+            -webkit-text-fill-color:  var(--text-clr) !important;
+            background-color:  var(--bg-clr) !important;
+            transition: background-color 300ms;
+            caret-color: var(--text-clr);
+          }
         }
   
         textarea:focus {
