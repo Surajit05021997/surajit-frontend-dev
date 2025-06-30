@@ -1,11 +1,13 @@
 import './ContactPage.scss';
 import macOSControls from '../assets/icons/MacOSControls.svg';
 import AppButton from './shared/AppButton';
-import { useRef } from 'react';
+import AppPopup from './shared/AppPopup';
+import { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 
 const ContactPage = () => {
   const form = useRef();
+  const [popup, setPopup] = useState({ show: false, message: '' });
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -16,15 +18,16 @@ const ContactPage = () => {
       import.meta.env.VITE_EMAILJS_USER_ID
     )
     .then(() => {
-      alert('Message sent successfully!');
+      setPopup({ show: true, message: 'Message sent successfully!' });
       form.current.reset();
     }, () => {
-      alert('Failed to send message.');
+      setPopup({ show: true, message: 'Failed to send message.' });
     });
   };
 
   return (
     <>
+      {popup.show && <AppPopup message={popup.message} onClose={() => setPopup({ show: false, message: '' })} />}
       <div className="container">
         <div className="contact-page">
           <h1 className="title">Get in touch</h1>
