@@ -6,7 +6,8 @@ import { useSelector } from 'react-redux';
 import { updateTheme } from '../store/settingsSlice';
 import sunIcon from '../assets/icons/Sun.svg';
 import moonIcon from '../assets/icons/Moon.svg';
-import linkArrow from '../assets/icons/LinkArrow.svg';
+import linkArrowLightIcon from '../assets/icons/LinkArrowLight.svg';
+import linkArrowDarkIcon from '../assets/icons/LinkArrowDark.svg';
 import linkedinLightIcon from '../assets/icons/LinkedInLight.svg';
 import linkedinDarkIcon from '../assets/icons/LinkedInDark.svg';
 import githubLightIcon from '../assets/icons/GithubLight.svg';
@@ -82,7 +83,7 @@ const AppHeader = () => {
                 </li>
                 <li onClick={toggleHeaderExtraNavMenu} ref={moreNavItemEl}>
                   <div>More</div>
-                  <img className={headerExtraNavMenuExpanded ? 'link-arrow-up' : 'link-arrow-down'} src={linkArrow} alt="Link arrow" />
+                  <img className={headerExtraNavMenuExpanded ? 'link-arrow-up' : 'link-arrow-down'} src={settings.theme === 'light-mode' ? linkArrowDarkIcon : linkArrowLightIcon} alt="Link arrow" />
                 </li>
               </ul>
               <ul className={`extra-nav-menu ${headerExtraNavMenuExpanded ? 'expanded' : 'collapsed'}`} ref={extraNavMenuEl}>

@@ -28,7 +28,9 @@ const HomePage = () => {
             <a href={resume} download="Resume">
               <AppButton label="See my resume" />
             </a>
-            <AppButton label="Get in touch" type="secondary" />
+            <Link to="/contact">
+              <AppButton label="Get in touch" type="secondary" />
+            </Link>
           </div>
         </section>
 
