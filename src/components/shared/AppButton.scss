@@ -1,23 +1,44 @@
 .app-btn {
-  padding: 1.25rem 2rem;
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1.05rem;
+  font-weight: var(--fw-semi-bold, 600);
   border: none;
-  border-radius: .5rem;
+  border-radius: 2rem;
   cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  outline: none;
+  letter-spacing: 0.5px;
 
   &.primary {
-    color: var(--clr-neutral-100);
-    background: var(--dark-gradient);
-    border-top: 3px solid #202020;
-    border-left: 2px solid #202020;
-    border-right: 1px solid #202020;
-    border-bottom: 1px solid #101010;
+    background: var(--btn-primary-bg-clr);
+    color: var(--btn-primary-clr);
+    border: 2px solid var(--btn-primary-border-clr);
+
+    &:hover,
+    &:focus {
+      background: var(--btn-hover-bg-clr);
+      color: var(--btn-hover-clr);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+      border: 2px solid var(--btn-primary-border-clr);;
+    }
   }
 
   &.secondary {
+    background: var(--btn-secondary-bg-clr);
     color: var(--btn-secondary-clr);
-    background-color: var(--btn-secondary-bg-clr);
-    border: 3px solid var(--btn-secondary-bg-clr);
-    border-bottom: 1px solid var(--btn-secondary-bg-clr);
-    transition: all 300ms;
+    border: 2px solid var(--btn-secondary-border-clr);
+
+    &:hover,
+    &:focus {
+      background: var(--btn-hover-bg-clr);
+      border: 2px solid var(--btn-secondary-border-clr);
+      box-shadow: 0 4px 18px rgba(255, 255, 255, 0.12);
+    }
+  }
+
+  &:active {
+    transform: scale(0.97);
   }
 }
