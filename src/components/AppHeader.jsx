@@ -20,6 +20,7 @@ import ellipse3 from '../assets/background/Ellipse3.svg';
 
 const AppHeader = () => {
   const [headerExtraNavMenuExpanded, setHeaderExtraNavMenuExpanded] = useState(false);
+  const [themeAnim, setThemeAnim] = useState(false);
   const settings = useSelector((state) => state.settings);
   const extraNavMenuEl = useRef(null);
   const moreNavItemEl = useRef(null);
@@ -51,6 +52,8 @@ const AppHeader = () => {
   }
 
   const toggleTheme = () => {
+    setThemeAnim(true);
+    setTimeout(() => setThemeAnim(false), 400); // match animation duration
     if (settings.theme === 'light-mode') {
       dispatch(updateTheme('dark-mode'));
       localStorage.setItem('theme', 'dark-mode');
@@ -103,8 +106,13 @@ const AppHeader = () => {
               </a>
             </div>
             <div className="separator"></div>
-            <div className="header-item theme-controller" onClick={toggleTheme}>
-              <img id={settings.theme} src={settings.theme === 'light-mode' ? sunIcon : moonIcon} alt="Theme controller" />
+            <div className="header-item theme-controller" title="Change Theme" onClick={toggleTheme}>
+              <img
+                id={settings.theme}
+                className={themeAnim ? 'theme-anim' : ''}
+                src={settings.theme === 'light-mode' ? sunIcon : moonIcon}
+                alt="Theme controller"
+              />
             </div>
           </div>
         </div>

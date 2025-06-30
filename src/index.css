@@ -84,7 +84,7 @@ input, textarea {
 
 /* light and dark mode colors */
 :root:has(#light-mode) {
-  --text-clr: var(--clr-neutral-825);
+  --text-clr: var(--clr-neutral-850);
   --text-secondary-clr: var(--clr-neutral-850);
   --bg-clr: var(--clr-neutral-100);
   --header-bg-clr: var(--clr-white-25);
@@ -106,7 +106,7 @@ input, textarea {
 }
 
 :root:has(#dark-mode) {
-  --text-clr: var(--clr-neutral-700);
+  --text-clr: var(--clr-neutral-300);
   --text-secondary-clr: var(--clr-neutral-100);
   --bg-clr: var(--clr-neutral-900);
   --header-bg-clr: var(--clr-black-25);

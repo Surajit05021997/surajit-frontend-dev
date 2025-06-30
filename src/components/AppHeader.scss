@@ -71,6 +71,10 @@ header {
 
       .theme-controller {
         cursor: pointer;
+
+        img.theme-anim {
+          animation: theme-bounce 0.4s cubic-bezier(0.4,0,0.2,1);
+        }
       }
     }
   }
@@ -99,5 +103,12 @@ header {
       top: -111px;
       z-index: -1;
     }
+  }
+
+  @keyframes theme-bounce {
+    0% { transform: scale(1) rotate(0deg); }
+    30% { transform: scale(1.2) rotate(-20deg); }
+    60% { transform: scale(0.95) rotate(15deg); }
+    100% { transform: scale(1) rotate(0deg); }
   }
 }
