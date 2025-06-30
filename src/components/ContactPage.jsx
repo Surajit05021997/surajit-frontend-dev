@@ -8,9 +8,11 @@ import emailjs from 'emailjs-com';
 const ContactPage = () => {
   const form = useRef();
   const [popup, setPopup] = useState({ show: false, message: '' });
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
     emailjs.sendForm(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
@@ -20,8 +22,10 @@ const ContactPage = () => {
     .then(() => {
       setPopup({ show: true, message: 'Message sent successfully!' });
       form.current.reset();
+      setLoading(false);
     }, () => {
       setPopup({ show: true, message: 'Failed to send message.' });
+      setLoading(false);
     });
   };
 
@@ -37,7 +41,12 @@ const ContactPage = () => {
       <hr />
       <div className="container">
         <div className="contact-page">
-          <div className="form-container">
+          <div className="form-container" style={{position: 'relative'}}>
+            {loading && (
+              <div className="loading-overlay">
+                <span className="loading-text">Sending<span className="dot-1">.</span><span className="dot-2">.</span><span className="dot-3">.</span></span>
+              </div>
+            )}
             <div className="header">
               <img src={macOSControls} alt="Mac OS Controls" />
             </div>
