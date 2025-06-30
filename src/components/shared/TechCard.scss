@@ -8,9 +8,16 @@
   gap: 2.5rem;
   border-radius: 2rem;
   transition: background-color 300ms;
+  cursor: pointer;
+
+  &:hover .tech-icon {
+    transform: scale(1.15);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
   .tech-icon {
     margin: 2.5rem 0 .75rem 0;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .tech-name {

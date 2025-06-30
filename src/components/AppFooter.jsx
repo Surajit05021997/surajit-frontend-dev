@@ -18,7 +18,7 @@ const AppFooter = () => {
             <Link to="/">
               <img src={settings.theme === 'light-mode' ? logoDarkIcon : logoLightIcon} alt="Logo" />
             </Link>
-            <p className="copyright">© 2024 Surajit Maity. All Rights Reserved.</p>
+            <p className="copyright">© 2025 Surajit Maity. All Rights Reserved.</p>
           </div>
         </div>
         <div className="footer-item-right">
