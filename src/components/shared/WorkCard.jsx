@@ -5,10 +5,29 @@ import getImageUrl from '../../utils/getImageUrl';
 import laptopPlaceholder from '../../assets/images/LaptopPlaceholder.png';
 import arrowRightDark from '../../assets/icons/arrowRightDark.svg';
 import arrowRightLight from '../../assets/icons/arrowRightLight.svg';
+import { useEffect, useRef, useState } from 'react';
 
 const WorkCard = ({ work }) => {
   const { logoName, title, body, siteImageName, siteUrl } = work;
   const settings = useSelector((state) => state.settings);
+  const imageRef = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new window.IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="work-card">
@@ -25,7 +44,7 @@ const WorkCard = ({ work }) => {
       </div>
       {
         siteImageName ? (
-          <div className="image">
+          <div className={`image${inView ? ' slide-in' : ''}`} ref={imageRef}>
             <img className="laptop-placeholder" src={laptopPlaceholder} alt="Laptop placeholder" />
             <img className="site-image" src={getImageUrl('/src/assets/work', siteImageName)} alt="" />
           </div>

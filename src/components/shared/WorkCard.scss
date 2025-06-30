@@ -46,6 +46,15 @@
 
   .image {
     position: relative;
+    opacity: 0;
+    transform: translateX(60px);
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &.slide-in {
+      opacity: 1;
+      transform: translateX(0);
+    }
 
     .laptop-placeholder {
       position: absolute;
