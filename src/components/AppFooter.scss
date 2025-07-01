@@ -4,7 +4,8 @@ footer {
   justify-content: space-between;
   position: relative;
   @media (max-width: 767px) {
-    margin-bottom: 4rem;
+    margin: 4rem 0 4rem;
+    gap: 2rem;
   }
 
   .footer-item-left {
@@ -26,6 +27,9 @@ footer {
   .footer-item-right {
     display: flex;
     gap: 7.5rem;
+    @media (max-width: 767px) {
+      gap: 2rem;
+    }
     
     .footer-item {
       font-size: var(--fs-250);
@@ -40,6 +44,10 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        @media (max-width: 767px) {
+           margin-top: 1rem;
+           gap: .5rem;
+        }
       }
     }
   }

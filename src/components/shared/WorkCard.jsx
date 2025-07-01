@@ -35,7 +35,7 @@ const WorkCard = ({ work }) => {
         <div>
           <img className="logo" src={getImageUrl('/src/assets/work', logoName)} alt="" />
           <h3 className="title">{title}</h3>
-          <p>{body}</p>
+          <p className="description">{body}</p>
         </div>
         <a className="site-link" href={siteUrl} target="_blank">
           <div>Visit Site</div>

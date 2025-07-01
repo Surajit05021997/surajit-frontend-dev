@@ -12,6 +12,7 @@
     border: 2px solid var(--border-clr);
     cursor: pointer;
     @media (max-width: 767px) {
+      padding-top: 2rem;
       width: auto;
       height: auto;
     }
@@ -27,6 +28,10 @@
   
     .title {
       margin-bottom: 1rem;
+    }
+
+    .subtitle {
+      padding-inline: 1rem;
     }
   }
 }

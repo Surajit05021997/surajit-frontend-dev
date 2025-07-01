@@ -37,6 +37,10 @@
       margin: 0 0 1rem 0;
     }
 
+    .description {
+      margin-bottom: .75rem;
+    }
+
     .site-link {
       color: var(--heading-clr);
       font-size: var(--fs-275);
@@ -68,11 +72,15 @@
       transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     @media (max-width: 767px) {
       margin: auto;
+      transform: translateY(60px);
     }
 
     &.slide-in {
       opacity: 1;
       transform: translateX(0);
+      @media (max-width: 767px) {
+      transform: translateY(0);
+    }
     }
 
     .laptop-placeholder {
