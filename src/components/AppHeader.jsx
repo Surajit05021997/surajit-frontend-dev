@@ -81,20 +81,20 @@ const AppHeader = () => {
             <div className={`header-item navbar${mobileNavOpen ? ' expanded' : ' collapsed'}`}>
               <ul>
                 <li>
-                  <Link to="/about">About</Link>
+                  <Link to="/about" onClick={handleMobileNavToggle}>About</Link>
                 </li>
                 <li>
-                  <Link to="/work">Work</Link>
+                  <Link to="/work" onClick={handleMobileNavToggle}>Work</Link>
                 </li>
                 <li>
-                  <Link to="/contact">Contact</Link>
+                  <Link to="/contact" onClick={handleMobileNavToggle}>Contact</Link>
                 </li>
                 <li className="only-desktop" onClick={toggleHeaderExtraNavMenu} ref={moreNavItemEl}>
                   <div>More</div>
                   <img className={headerExtraNavMenuExpanded ? 'link-arrow-up' : 'link-arrow-down'} src={settings.theme === 'light-mode' ? linkArrowDarkIcon : linkArrowLightIcon} alt="Link arrow" />
                 </li>
                 <li className="only-mobile">
-                  <Link to="/techstack">Tech Stack</Link>
+                  <Link to="/techstack" onClick={handleMobileNavToggle}>Tech Stack</Link>
                 </li>
               </ul>
               <ul className={`extra-nav-menu ${headerExtraNavMenuExpanded ? 'expanded' : 'collapsed'}`} ref={extraNavMenuEl}>
