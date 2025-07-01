@@ -21,6 +21,7 @@ import ellipse3 from '../assets/background/Ellipse3.svg';
 const AppHeader = () => {
   const [headerExtraNavMenuExpanded, setHeaderExtraNavMenuExpanded] = useState(false);
   const [themeAnim, setThemeAnim] = useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const settings = useSelector((state) => state.settings);
   const extraNavMenuEl = useRef(null);
   const moreNavItemEl = useRef(null);
@@ -61,6 +62,10 @@ const AppHeader = () => {
       dispatch(updateTheme('light-mode'));
       localStorage.setItem('theme', 'light-mode');
     }
+  }
+
+  const handleMobileNavToggle = () => {
+    setMobileNavOpen(!mobileNavOpen);
   }
 
   return (
@@ -113,6 +118,14 @@ const AppHeader = () => {
                 src={settings.theme === 'light-mode' ? sunIcon : moonIcon}
                 alt="Theme controller"
               />
+            </div>
+            <div className="separator second"></div>
+            <div className="burger-menu">
+              <button className={`burger-menu-icon${mobileNavOpen ? ' open' : ''}`} onClick={handleMobileNavToggle} aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
             </div>
           </div>
         </div>
