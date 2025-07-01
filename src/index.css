@@ -104,7 +104,7 @@ input, textarea {
   --border-clr: var(--clr-neutral-275);
   --know-me-card-bg-clr: var(--clr-neutral-200);
   --hr-clr: var(--clr-black-10);
-  --form-bg-clr: var(--clr-neutral-200);
+  --form-bg-clr: var(--clr-neutral-250);
 }
 
 :root:has(#dark-mode) {

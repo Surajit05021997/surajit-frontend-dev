@@ -36,6 +36,7 @@
         align-items: center;
 
         label {
+          min-width: 3.625rem;
           color: var(--text-secondary-clr);
           transition: color 300ms;
         }
