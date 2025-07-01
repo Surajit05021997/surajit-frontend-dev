@@ -20,24 +20,65 @@ header {
         margin-inline: 2.5rem;
         position: relative;
         @media (max-width: 767px) {
-          
+          position: absolute;
+          right: 0;
+          top: 3.75rem;
+
+          &.collapsed {
+            display: none;
+          }
+
+          &.expanded {
+            position: fixed !important;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            background: var(--form-bg-clr);
+            z-index: 1200;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            box-shadow: none;
+            transition: background 0.3s cubic-bezier(0.4,0,0.2,1);
+            /* Prevent touch scroll on mobile */
+            touch-action: none;
+            overscroll-behavior: contain;
+          }
         }
   
         ul {
           display: flex;
           gap: 2.5rem;
-          // @media (max-width: 767px) {
-          //   justify-content: center;
-          // }
+          @media (max-width: 767px) {
+            justify-content: center;
+            flex-direction: column;
+            gap: 1.5rem;
+          }
 
           li {
             cursor: pointer;
             user-select: none;
             display: flex;
             align-items: center;
-            // @media (max-width: 767px) {
-            //   color: var(--mobile-header-txt-clr);
-            // }
+
+            &.only-desktop {
+              @media (max-width: 767px) {
+                display: none;
+              }
+            }
+
+            &.only-mobile {
+              display: none;
+              @media (max-width: 767px) {
+                display: block;
+              }
+            }
 
             .link-arrow-down {
               transition: transform 300ms;
@@ -57,6 +98,11 @@ header {
           right: -4.625rem;
           background-color: var( --header-bg-clr);
           border-radius: 0 0 .75rem .75rem;
+           @media (max-width: 767px) {
+            padding: .5rem .5rem;
+            top: 9.25rem;
+            right: -2.625rem;
+           }
 
           &.collapsed {
             display: none;

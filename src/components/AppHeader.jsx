@@ -78,7 +78,7 @@ const AppHeader = () => {
                 <img src={settings.theme === 'light-mode' ? logoDarkIcon : logoLightIcon} alt="Logo" />
               </Link>
             </div>
-            <div className="header-item navbar">
+            <div className={`header-item navbar${mobileNavOpen ? ' expanded' : ' collapsed'}`}>
               <ul>
                 <li>
                   <Link to="/about">About</Link>
@@ -89,9 +89,12 @@ const AppHeader = () => {
                 <li>
                   <Link to="/contact">Contact</Link>
                 </li>
-                <li onClick={toggleHeaderExtraNavMenu} ref={moreNavItemEl}>
+                <li className="only-desktop" onClick={toggleHeaderExtraNavMenu} ref={moreNavItemEl}>
                   <div>More</div>
                   <img className={headerExtraNavMenuExpanded ? 'link-arrow-up' : 'link-arrow-down'} src={settings.theme === 'light-mode' ? linkArrowDarkIcon : linkArrowLightIcon} alt="Link arrow" />
+                </li>
+                <li className="only-mobile">
+                  <Link to="/techstack">Tech Stack</Link>
                 </li>
               </ul>
               <ul className={`extra-nav-menu ${headerExtraNavMenuExpanded ? 'expanded' : 'collapsed'}`} ref={extraNavMenuEl}>
