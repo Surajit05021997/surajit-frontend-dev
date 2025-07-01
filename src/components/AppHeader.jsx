@@ -33,7 +33,7 @@ const AppHeader = () => {
     }
 
     document.addEventListener('click', handleExtraNavMeuCollapse);
-  }, []);
+  }, [dispatch]);
 
   useEffect( () => () => document.removeEventListener('click', handleExtraNavMeuCollapse), [] );
 

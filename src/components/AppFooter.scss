@@ -3,6 +3,9 @@ footer {
   display: flex;
   justify-content: space-between;
   position: relative;
+  @media (max-width: 767px) {
+    margin-bottom: 4rem;
+  }
 
   .footer-item-left {
     .footer-item {
@@ -52,18 +55,30 @@ footer {
       left: -191px;
       bottom: -2.625rem;
       z-index: -3;
+      @media (max-width: 767px) {
+        left: -191px;
+        bottom: -4.625rem;
+      }
     }
   
     &.ellipse-5 {
       left: 0;
       bottom: -2.625rem;
       z-index: -2;
+      @media (max-width: 767px) {
+        left: 0;
+        bottom: -4.625rem;
+      }
     }
 
     &.ellipse-6 {
       left: 179px;
       bottom: -2.625rem;
       z-index: -1;
+      @media (max-width: 767px) {
+        left: 12px;
+        bottom: -4.625rem;
+      }
     }
   }
 }

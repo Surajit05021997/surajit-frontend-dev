@@ -87,6 +87,8 @@ input, textarea {
   --text-clr: var(--clr-neutral-850);
   --text-secondary-clr: var(--clr-neutral-850);
   --bg-clr: var(--clr-neutral-100);
+  --mobile-header-txt-clr: var(--clr-neutral-100);
+  --mobile-header-bg-clr: var(--clr-neutral-850);
   --header-bg-clr: var(--clr-white-25);
   --heading-clr: var(--clr-neutral-850);
   --list-item-clr: var(--clr-neutral-850);
@@ -109,6 +111,8 @@ input, textarea {
   --text-clr: var(--clr-neutral-300);
   --text-secondary-clr: var(--clr-neutral-200);
   --bg-clr: var(--clr-neutral-900);
+  --mobile-header-txt-clr: var(--clr-neutral-850);
+  --mobile-header-bg-clr: var(--clr-neutral-100);
   --header-bg-clr: var(--clr-black-25);
   --heading-clr: var(--clr-neutral-100);
   --list-item-clr: var(--clr-neutral-300);
