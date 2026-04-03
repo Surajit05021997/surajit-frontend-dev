@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import getImageUrl from '../../utils/getImageUrl';
 import laptopPlaceholder from '../../assets/images/LaptopPlaceholder.png';
-import arrowRightDark from '../../assets/icons/arrowRightDark.svg';
-import arrowRightLight from '../../assets/icons/arrowRightLight.svg';
+import arrowRightDark from '../../assets/icons/ArrowRightDark.svg';
+import arrowRightLight from '../../assets/icons/ArrowRightLight.svg';
 import { useEffect, useRef, useState } from 'react';
 
 const WorkCard = ({ work }) => {
