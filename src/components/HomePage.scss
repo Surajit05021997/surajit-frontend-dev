@@ -18,10 +18,10 @@
     .body {
       font-size: var(--fs-400);
       width: 47rem;
+      margin-block: 3rem;
       @media (max-width: 767px) {
         width: auto;
       }
-      margin-block: 3rem;
     }
 
     .btn-group {

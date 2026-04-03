@@ -4,7 +4,7 @@ import resume from '../assets/files/Resume.pdf';
 import WorkCardList from './shared/WorkCardList';
 import KnowMeCard from './shared/KnowMeCard';
 import selectedWorkList from '../constants/selectedWorkList.json';
-import knowMeCardDetails from '../constants/KnowMeCardDetails.json';
+import knowMeCardDetails from '../constants/knowMeCardDetails.json';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
